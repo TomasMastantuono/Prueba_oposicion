@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[a4paper, margin=2cm]{geometry} % para los márgenes
+\usepackage{amsmath}
+
+\author{Tomás Mastantuono}
+
+\begin{document}
+\title{Prueba de oposición}
+\date{}
+\maketitle
+
+
+\section*{Introducción}
+\label{introducción}
+
+\section{DCL, Ecuaciones de Newton}
+La partícula se encuentra enhebrada a un alambre rígido y sin rozamiento. Además se encuentra unida a un resorte de constante $k$ y longitud natural $l_0 = 0$, donde el otro extremo del resorte se encuentra libre sobre $\hat{y}$ de forma tal que el resorte siempre se mantenga de forma horizontal, tal como se muestra en la Figura \ref{fig: diagrama_problema}.
+
+\begin{figure}
+
+    \label{fig: diagrama_problema}
+\end{figure}
+
+Previo a aplicar las ecuaciones de Newton me parece importante ver los vínculos que le imponemos a la partícula. La principal condición que tiene que cumplir la partícula es que se encuentra enhebrada al alambre rígido, es decir, solo se puede mover por el hilo, no por fuera de el. Esta condición se puede traducir directamente a restricciones sobre los valores que pueden tomar las coordenadas de la masa / partícula.
+
+Siguiendo el esquema dado por la Figura \ref{fig: diagrama_problema} podemos ver como la partícula solo puede moverse siguiendo a la barra, la cual por el sistema de referencia puesto podemos describir como una función lineal que tiene ordenada al origen en $L$ y como raiz también $L$. De esta forma, siguiendo la Figura \ref{fig: vínculo}, nos da la condición de vínculo dada por (\ref{eq: vínculo}).
+
+\begin{figure}
+    \label{fig: vínculo}
+\end{figure}
+
+\begin{equation}
+    a
+    \label{eq: vínculo}
+\end{equation}
+
+Además, utilizando la Figura \ref{fig: vínculo}, relaciones trigonométricas dadas por la introducción (volvería a repasar \ref{introducción}) y Pitágoras, podemos notar que el largo de la barra por la cual la partícula puede oscilar es $h = \sqrt{2}L/2$.
+Notemos que la partícula en el problema solo puede moverse por el hilo, el cual describimos como una función lineal, por lo que si $y(t)$ y $x(t)$ representan las coordenadas de la posición de la partícula entonces esa función lineal representa un vínculo.
+
+Ahora si paso al DCL teniendo en cuenta que la partícula solo puede moverse sobre la barra, por lo que debe haber $\vec{F}_{v}$ que se encarga de eso:
+
+\begin{figure}
+    \label{fig: DCL}
+\end{figure}
+
+Para poder escribir las ecuaciones de Newton en cada dirección del sistema de coordenadas necesito ver alguna foorma de descomponer $\vec{F}_v$ en los ejes $\vec{x}$ e $\vec{y}$.
+
+\begin{equation}
+    \vec{F}_v = F_{vx} \hat{x} + F_{vy} \hat{y} = Fcos(\alpha) \hat{x} + Fsin(\alpha) \hat{y}
+\end{equation}
+
+Para obtener el valor de $\alpha$ (la cual es constante en el tiempo porque las otras fuerzas no cambian de dirección a medida que la partícula se mueve) utilizo la forma geométrica formada entre la barra y el sistema de coordenadas en algún tiempo $t$. De esta forma, utilizando la Figura \ref{fig: vínculo} puedo obtener el siguiente sistema de ecuaciones:
+
+\begin{equation}
+\begin{split}
+    sin(\alpha) &= \frac{h/2}{L} = \frac{\sqrt{2}}{2} \\
+    cos(\alpha) &= \frac{L/\sqrt{2}}{L} = \frac{1}{\sqrt{2}}
+    \label{eq: sist_alpha}
+\end{split}
+\end{equation}
+
+Por lo tanto, resolviendo el sistema de ecuaciones dado por (\ref{eq: sist_alpha}), obtengo que $\alpha = \pi/4$. De esta forma, reemplazando en las proyecciones de la fuerza sobre los ejes cartesianos:
+
+\begin{equation}
+    F_{vy} = F \frac{\sqrt{2}}{2}; F_{vx} = F \frac{\sqrt{2}}{2}
+\end{equation}
+
+Utilizando ahora que conozco la forma descompuesta de la fuerza de vínculo, escribo las ecuaciones de Newton en las direcciones de $\hat{x}$ e $\hat{y}$, obteniendo el siguiente sistema:
+
+\begin{equation}
+\begin{split}
+    \hat{x}\big) m\ddot{x} = -kx + F\frac{\sqrt{2}}{2} \\
+    \hat{y}\big) m\ddot{y} = -mg + F\frac{\sqrt{2}}{2}
+\end{split}
+\end{equation}
+
+PARA HALLAR LOS PUNTOS DE EQUILIBRIO....
+
+\section{Solución del problema}
+\end{document}
