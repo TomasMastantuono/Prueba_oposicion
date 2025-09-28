@@ -1,55 +1,75 @@
 \documentclass{article}
 \usepackage[a4paper, margin=2cm]{geometry} % para los márgenes
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{caption} %para poner boludeces de captions en las figuras
+\usepackage[spanish]{babel}
 
 \author{Tomás Mastantuono}
 
 \begin{document}
-\title{Prueba de oposición}
+\title{Prueba de oposición | Ay. de segunda}
 \date{}
 \maketitle
 
-
+\begin{multicols}{2}
 \section*{Introducción}
 \label{introducción}
 
 \section{DCL, Ecuaciones de Newton}
 La partícula se encuentra enhebrada a un alambre rígido y sin rozamiento. Además se encuentra unida a un resorte de constante $k$ y longitud natural $l_0 = 0$, donde el otro extremo del resorte se encuentra libre sobre $\hat{y}$ de forma tal que el resorte siempre se mantenga de forma horizontal, tal como se muestra en la Figura \ref{fig: diagrama_problema}.
 
-\begin{figure}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{src/esquema_problema.pdf}
+    \caption{
+        Esquema del problema que dibujaría en el pizarrón para hacer explicación detallada de los parámetros del problema.
+    }
     \label{fig: diagrama_problema}
 \end{figure}
 
 Previo a aplicar las ecuaciones de Newton me parece importante ver los vínculos que le imponemos a la partícula. La principal condición que tiene que cumplir la partícula es que se encuentra enhebrada al alambre rígido, es decir, solo se puede mover por el hilo, no por fuera de el. Esta condición se puede traducir directamente a restricciones sobre los valores que pueden tomar las coordenadas de la masa / partícula.
 
-Siguiendo el esquema dado por la Figura \ref{fig: diagrama_problema} podemos ver como la partícula solo puede moverse siguiendo a la barra, la cual por el sistema de referencia puesto podemos describir como una función lineal que tiene ordenada al origen en $L$ y como raiz también $L$. De esta forma, siguiendo la Figura \ref{fig: vínculo}, nos da la condición de vínculo dada por (\ref{eq: vínculo}).
+Siguiendo el esquema dado por la Figura \ref{fig: diagrama_problema} podemos ver como la partícula solo puede moverse siguiendo a la barra, la cual por el sistema de referencia puesto podemos describir como una función lineal que tiene ordenada al origen en $L$ y como raiz también $L$. De esta forma, siguiendo la Figura \ref{fig: vinculo}, nos da la condición de vínculo dada por (\ref{eq: ec_vinculo}).
 
-\begin{figure}
-    \label{fig: vínculo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{src/gráfico del vínculo.pdf}
+    \captionsetup{aboveskip=0pt, belowskip=0pt}
+    \caption{
+        Esquema de parámetros necesarios para obtener la relación de vínculo entre las coordenadas $x$ e $y$. Además será utilizada para explicar las proyecciones de la fuerza sobre ambos ejes.
+    }
+    \label{fig: vinculo}
 \end{figure}
 
 \begin{equation}
-    a
-    \label{eq: vínculo}
+    y(x) = -x + L
+    \label{eq: ec_vinculo}
 \end{equation}
 
-Además, utilizando la Figura \ref{fig: vínculo}, relaciones trigonométricas dadas por la introducción (volvería a repasar \ref{introducción}) y Pitágoras, podemos notar que el largo de la barra por la cual la partícula puede oscilar es $h = \sqrt{2}L/2$.
+Además, utilizando la Figura \ref{fig: vinculo}, relaciones trigonométricas dadas por la introducción (volvería a repasar \ref{introducción}) y Pitágoras, podemos notar que el largo de la barra por la cual la partícula puede oscilar es $h = \sqrt{2}L/2$.
 Notemos que la partícula en el problema solo puede moverse por el hilo, el cual describimos como una función lineal, por lo que si $y(t)$ y $x(t)$ representan las coordenadas de la posición de la partícula entonces esa función lineal representa un vínculo.
 
 Ahora si paso al DCL teniendo en cuenta que la partícula solo puede moverse sobre la barra, por lo que debe haber $\vec{F}_{v}$ que se encarga de eso:
 
-\begin{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{src/DCL.pdf}
+    \caption{
+        EXPLICAR COSAS.
+    }
     \label{fig: DCL}
 \end{figure}
 
-Para poder escribir las ecuaciones de Newton en cada dirección del sistema de coordenadas necesito ver alguna foorma de descomponer $\vec{F}_v$ en los ejes $\vec{x}$ e $\vec{y}$.
+Para poder escribir las ecuaciones de Newton en cada dirección del sistema de coordenadas necesito ver alguna foorma de descomponer $\vec{F}_v$ en los ejes $\hat{x}$ e $\hat{y}$, para ver la siguiente descomposición utilizaría la Figura \ref{fig: vinculo}.
 
 \begin{equation}
     \vec{F}_v = F_{vx} \hat{x} + F_{vy} \hat{y} = Fcos(\alpha) \hat{x} + Fsin(\alpha) \hat{y}
 \end{equation}
 
-Para obtener el valor de $\alpha$ (la cual es constante en el tiempo porque las otras fuerzas no cambian de dirección a medida que la partícula se mueve) utilizo la forma geométrica formada entre la barra y el sistema de coordenadas en algún tiempo $t$. De esta forma, utilizando la Figura \ref{fig: vínculo} puedo obtener el siguiente sistema de ecuaciones:
+Para obtener el valor de $\alpha$ (la cual es constante en el tiempo porque las otras fuerzas no cambian de dirección a medida que la partícula se mueve) utilizo la forma geométrica formada entre la barra y el sistema de coordenadas en algún tiempo $t$. De esta forma, utilizando la Figura \ref{fig: vinculo} puedo obtener el siguiente sistema de ecuaciones:
 
 \begin{equation}
 \begin{split}
@@ -209,8 +229,9 @@ Por lo que ahora ya tenemos, no solo una función de la posición de la coordena
 
 Donde la solución posee la siguiente forma:
 
-\begin{figure}
-    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{src/solucion_xt.pdf}
 \end{figure}
 
 Notemos que la solución que encontramos nos muestra que la partícula se encuentra oscilando al rededor de la posición de equilibrio, con una frecuencia que depende de la constante elástica del resorte y de la masa de la propia partícula. Por lo que si la constante elástica del resorte fuera mas grande, lo que podría llegar a significar por ejemplo que el resorte es mas duro, si logramos desplazarlo hacia alguna posición donde la fuerza elástica sea diferente de cero, la partícula se pondría a oscilar más rápido debido a que la fuerza elástica depende de una constante $k$ que es mayor a la anterior, traduciéndose en nuestra solución a que la frecuencia aumente y por lo tanto el coseno cumpla mas "ciclos" en un menor tiempo. Ocurriría completamente lo opuesto si la partícula tuviera menor masa, esto es debido a que el factor $m$ que referencia a la masa de la partícula, se encuentra dividiendo en la expresión de la frecuencia.
@@ -247,5 +268,7 @@ Notemos que la primera condición solo me dice que la masa se encuentra en el ex
 \begin{equation}
     0 \leq L - \frac{mg}{k} \leq \frac{L}{2}
 \end{equation}
+
+\end{multicols}
 
 \end{document}
