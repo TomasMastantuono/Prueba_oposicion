@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1758944371.72577 "c:/Users/User/Documents/Ayudantia/2025/opsicion_2025.tex" "build/opsicion_2025.pdf" "opsicion_2025" 1758944372.52356 0
+["pdflatex"] 1759036870.65548 "c:/Users/User/Documents/Ayudantia/2025/opsicion_2025.tex" "build/opsicion_2025.pdf" "opsicion_2025" 1759036871.28767 0
   "C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758944085 81074 e9df683c7a67b773afe1722d345afa16 ""
   "C:/Users/User/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758938203 13256900 a7265916d66bfc831425e070b2963333 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -25,6 +25,7 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty" 1734114575 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty" 1734114575 1057 525c2192b5febbd8c1f662c9468335bb ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty" 1750428994 2222 27db7d52163edae53881b71ff62e754e ""
@@ -38,9 +39,9 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty" 1578053545 42759 9cf6c5257b1bc7af01a58859749dd37a ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1749322634 2671 d9941f4bf4750e9b0603c9a2ec54693b ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1751005717 30351 a2b09edc6c93a742566b222c33d0278e ""
-  "build/opsicion_2025.aux" 1758944372 540 2a9851f6fa63120e61ea8d643fd9b5aa "pdflatex"
-  "c:/Users/User/Documents/Ayudantia/2025/opsicion_2025.tex" 1758944370 4116 9c108e0b1f81d2147a14b44c1b7c3b57 ""
-  "opsicion_2025.tex" 1758944370 4116 9c108e0b1f81d2147a14b44c1b7c3b57 ""
+  "build/opsicion_2025.aux" 1759036871 540 8dc21a80614d9dd27ff55f07318d5fd9 "pdflatex"
+  "c:/Users/User/Documents/Ayudantia/2025/opsicion_2025.tex" 1759036868 14957 d8632d1b3376c4b95e617ad66fe68ca1 ""
+  "opsicion_2025.tex" 1759036868 14957 d8632d1b3376c4b95e617ad66fe68ca1 ""
   (generated)
   "build/opsicion_2025.aux"
   "build/opsicion_2025.log"

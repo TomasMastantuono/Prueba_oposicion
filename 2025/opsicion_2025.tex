@@ -74,7 +74,178 @@ Utilizando ahora que conozco la forma descompuesta de la fuerza de vínculo, esc
 \end{split}
 \end{equation}
 
-PARA HALLAR LOS PUNTOS DE EQUILIBRIO....
+Para hallar los puntos de equilibrio tengo que encontrar los $\vec{X}_eq = x_eq \hat{x} + y_eq \vec{y}$ tal que en esas posiciones no hay aceleración (no hay fuerzas actuando sobre el cuerpo):
+
+\begin{equation}
+\begin{split}
+    kx_{eq} &= \frac{\sqrt{2}}{2}F \\
+    mg &= \frac{\sqrt{2}}{2}F
+\end{split}
+\end{equation}
+
+De esta ecuación podemos independizarnos de la fuerza externa y obtener una relación entre los parámetros del problema para el $x_{eq}$, que junto a la ecuación de vínculo, las coordenadas del equilibrio están dadas por:
+
+\begin{equation}
+    x_{eq} = \frac{mg}{k} ; y(x_{eq}) = -\frac{mg}{k} + l
+\end{equation}
+
+Tener en cuenta que estas posiciones de equilibrio solo pueden existir si se cumple la siguiente condición:
+
+\begin{equation}
+    0 \leq x_{eq} \leq L \Rightarrow 0 \leq mg \leq kL
+\end{equation}
+
+Notemos que la condición para que exista es pedir que la fuerza gravitatoria se, en módulo, mayor o igual que $0$, y menor o igual que $kL$, es decir, la fuerza máxima que logra hacer el resorte sobre la mesa.
 
 \section{Solución del problema}
+Ahora que conocemos estos datos, nos podemos meter de lleno a hallar la ecuación de movimiento, la cual no es mas que una ecuación diferencial de la "coordenada principal del sistema". Para esto tomo el siguiente sistema de ecuaciones:
+
+\begin{equation}
+\begin{split}
+    m\ddot{x} &= -kx + \frac{\sqrt{2}}{2}F \\
+    m\ddot{y} &= -mg + \frac{\sqrt{2}}{2}F \\
+    y(x) &= -x + L
+\end{split}
+\end{equation}
+
+Donde si derivamos el vínculo, la tercera ecuación del sistema, y reemplazamos en la segunda ecuación obtenemos la siguiente relación:
+
+\begin{equation}
+    -m\ddot{x} = -mg + \frac{\sqrt{2}}{2}F
+\end{equation}
+
+Ahora es importante notar que ya tenemos las herramientas necesarias para poder obtener el módulo de la fuerza de vínculo, por lo que tomando esta última ecuación y sumándola a la primera ecuación del sistema obtenemos el siguiente despeje:
+
+\begin{equation}
+\begin{split}
+    0 = -(kx + mg) + \sqrt{2}F
+    \leftrightarrow F = \frac{kx + mg}{\sqrt{2}}
+\end{split}
+\end{equation}
+
+Notemos que la intensidad de la fuerza de vínculo depende de la posición de la partícula, esto tiene sentido porque el peso no varía pero si la fuerza elástica.
+
+Ahora que ya conocemos el valor de la fuerza de víncula en función de la coordenada $x$, podemos reemplazar este último resultado en la primera ecuación del sistema de ecuaciones y obtener finalmente la ecuación de movimiento:
+
+\begin{equation}
+    \begin{split}
+        m\ddot{x} = -kx + \frac{\sqrt{2}}{2}\frac{kx + mg}{\sqrt{2}} \\
+        \leftrightarrow m\ddot{x} + \frac{k}{2}x = \frac{1}{2}mg
+    \end{split}
+\end{equation}
+
+Esta ecuación es la que posee toda la información del sistema / la única coordenada importe del sistema, es decir, es una ecuación para el único grado de libertad real que tiene la partícula. Además, es una ODE de $2^{do}$ grado inhomogenea, se dice que es inhomogenea porque no se encuentra igualada a la constante $0$. Para resolverlas completamente se necesitan dos condiciones inciales, en nuestro caso vamos a necesitar condiciones para la posición en algún instante del tiempo y condición para la velocidad de la partícula en algún instante. Estas ecuaciones, que se verá en Matemática 3, tiene el siguiente tipo de solución:
+
+\begin{equation}
+    x(t) = x_H(t) + X_p(t)
+\end{equation}
+
+Donde $X_H$ es la solución de la siguiente ecuación:
+
+\begin{equation}
+    m\ddot{x} + \frac{k}{2}x_H = 0
+\end{equation}
+
+Para este tipo de ecuaciones diferenciales, donde la coordenada $x$ se encuentra en el mismo lado que la derivada segunda de $x$, ambas con un signo positivo, se puede proponer como solución algo que tenga la forma que esperamos de la solución, es decir, como la partícula debería repetir su movimiento en alambre, podemos esperarnos que la solución sea una función que repita sus valores a medida que avanza su argumento, y alguna de las funciones que cumplen con esto son las trigonométricas, por lo que vamos a proponer lo siguiente:
+
+\begin{equation}
+    x_H(t) = Acos(\omega t) + Bsin(\omega t)
+\end{equation}
+
+Para probar si esta propuesta cumple la ecuación diferencial, debermos derivarla dos veces respecto del tiempo (este cálculo se haría detalladamente en el pizarrón), y reemplazar en la ecuación:
+\begin{equation}
+\begin{split}
+    m\big[ -A\omega^2cos(\omega t) - B\omega^2sin(\omega t) \big] + \frac{k}{2}\big[ Acos(\omega t) + Bsin(\omega t) \big] = 0 \\
+    Acos(\omega t) \bigg(\frac{k}{2} - m\omega^2\bigg) + Bsin(\omega t)\bigg( \frac{k}{2} - m\omega^2 \bigg) = 0 \\
+    \omega^2 = \frac{k}{2m}
+\end{split}
+\end{equation}
+
+Notemos que la $\omega$ posee unidades de $t^{-1}$, cosa importante ya que el coseno debe tener como argumento para ser válido elementos adimensionales. Además, a este nuevo parámetro $\omega$ se lo llama frecuencia, y como se puede ver, depende de dos parámetros importantes del sistema, la constante elástica del resorte $k$ y de la masa de la partícula, por lo que si el resorte fuera mas "duro", la frecuencia aumentaria en valor, mientras que si la partícula tuviera mayor masa, la frecuencia disminuiría.
+
+Ya resuelta la forma de $x_H$, nos toca resolver la parte inhomogenea de la ecuación, es decir, la ecuación sin tener el lado derecho igualado a $0$. En estos casos, solemos proponer:
+
+\begin{equation}
+    x_p = x_{eq}
+\end{equation}
+
+La idea detrás de esta propuesta es que, por lo visto al momento de obtener la posición de equilibrio, esperamos que si se cumplen las condiciones mencionadas en ese momento, la partícula logré llegar a ese punto. Por lo que veamos si ese punto cumple con la ecuación. Notemos que esta propuesta es decir $x_p = x_{eq} = cte$, por lo que si la derivamos dos veces nos da $0$ y obtenemos la siguiente igualdad:
+
+\begin{equation}
+    \frac{k}{2} \frac{mg}{k} = \frac{1}{2}mg
+\end{equation}
+
+Y como podemos ver obtuvimos una igualdad, es decir, lo que aparece del lado izquierdo es idéntico a lo del lado derecho. Finalmente si sumamos ambas soluciones, obtenemos que la solución general, sin tener en cuenta las condiciones iniciales, está dada por:
+
+\begin{equation}
+    x(t) = Acos(\omega t) + Bsin(\omega t) + \frac{mg}{k}
+\end{equation}
+
+Donde $A$ y $B$ se las define como constantes, que para tener coherencia en la solución, deben tener unidades de distancia. Además, estas constantes se encuentran indefinidas, por lo que necesitamos dos condiciones iniciales del problema para poder dar una solución final.
+
+En la última actividad nos dan las condiciones iniciales del problema, donde nos dicen que la partícula se encuentra inicialmente ($t = 0$) en la posición $x = L$, es decir, en el extremo inferior del alambre, y nos dicen que se encuentra con velocidad nula, es decir, $\dot{x}(t = 0) = 0$. Imponiendo estas condiciones sobre la solución que encontramos, es decir, tomando $x(t)$ e igualando $t = 0$ vamos a ver la siguiente condición:
+
+\begin{equation}
+    A + \frac{mg}{k} = L
+\end{equation}
+
+Con la misma idea, para poder utilizar la condción inicial sobre la velocidad en $x$ de la partícula a $t= 0$, solo debemos derivar respecto del tiempo e imponer esta condición, es decir:
+
+\begin{equation}
+    B\omega = 0
+\end{equation}
+
+Con esto logramos armarnos un sistema de dos ecuaciones para las dos incógnitas $A$ y $B$, de forma que si la resolvemos detalladamente obtenemos:
+
+\begin{equation}
+    A = L - \frac{mg}{k} ; B = 0
+\end{equation}
+
+Por lo que ahora ya tenemos, no solo una función de la posición de la coordenada $x$ en función del tiempo que resuelve la ecuación de movimiento, sino también una función que cumple con las condiciones iniciales. Esta solución es la siguiente:
+
+\begin{equation}
+    x(t) = \bigg( L - \frac{mg}{k} \bigg)cos(\omega t) + \frac{mg}{k}
+\end{equation}
+
+Donde la solución posee la siguiente forma:
+
+\begin{figure}
+    
+\end{figure}
+
+Notemos que la solución que encontramos nos muestra que la partícula se encuentra oscilando al rededor de la posición de equilibrio, con una frecuencia que depende de la constante elástica del resorte y de la masa de la propia partícula. Por lo que si la constante elástica del resorte fuera mas grande, lo que podría llegar a significar por ejemplo que el resorte es mas duro, si logramos desplazarlo hacia alguna posición donde la fuerza elástica sea diferente de cero, la partícula se pondría a oscilar más rápido debido a que la fuerza elástica depende de una constante $k$ que es mayor a la anterior, traduciéndose en nuestra solución a que la frecuencia aumente y por lo tanto el coseno cumpla mas "ciclos" en un menor tiempo. Ocurriría completamente lo opuesto si la partícula tuviera menor masa, esto es debido a que el factor $m$ que referencia a la masa de la partícula, se encuentra dividiendo en la expresión de la frecuencia.
+
+Finalmente nos piden hallar la altura máxima a la que llega la partícula. Para esto tengo que ver cuando la velocidad en la coordenada $y$ se anula, esto es debido a que la altura está dada por esta coordenada. Por lo tanto,  debo obtener $y(t)$, y para ello solo tengo que reemplazar la solución encontrada $x(t)$ en el vínculo que planteamos al principio del problema, obteniendo:
+
+\begin{equation}
+    y(t) = - \bigg( L - \frac{mg}{k} \bigg)cos(\omega t) - \frac{mg}{k} + L
+\end{equation}
+
+Para conocer la velocidad de la coordenada $y$ solo tengo que derivar esta última solución, y para ver la altura máxima solo tengo que conocer en cual tiempo su velocidad se anula:
+
+\begin{equation}
+    \dot{y}(t) = 0 = \omega \bigg(L - \frac{mg}{k}\bigg)sin(\omega t)
+\end{equation}
+
+Donde podemos notar que solo se cumple esta condición si:
+
+\begin{equation}
+    sin(\omega t) = 0
+\end{equation}
+
+Para poder cumplir con esto, $\omega t = 0 \vee \pi$. Veamos que significan ambas condiciones:
+
+\begin{equation}
+    \begin{split}
+        y(t = 0) &= 0 \\
+        y(t = \pi/\omega) &= 2 \bigg( L - \frac{mg}{k} \bigg)
+    \end{split}
+\end{equation}
+
+Notemos que la primera condición solo me dice que la masa se encuentra en el extremo inferior del alambre, cosa que tiene sentido porque corresponde a la condición inicial que nos dieron para poder resolver la ecuación de movimiento. En cambio, el segundo tiempo nos devuelve un valor diferente de la altura, la cual solo va a tener sentido si se cumple que su altura sea siempre mayor a cero, esto es por como selecciona el problema el sistema de coordenadas, y menor que $L$ debido a que esta es la altura del otro extremo del alambre, es decir, se debe cumplir la siguiente relación:
+
+\begin{equation}
+    0 \leq L - \frac{mg}{k} \leq \frac{L}{2}
+\end{equation}
+
 \end{document}
