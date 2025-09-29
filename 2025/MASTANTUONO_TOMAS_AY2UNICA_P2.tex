@@ -1,13 +1,14 @@
 \documentclass{article}
-\usepackage[a4paper, margin=2cm]{geometry} % para los márgenes
+\usepackage[a4paper, margin=1.5cm]{geometry} % para los márgenes
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{caption} %para poner boludeces de captions en las figuras
 \usepackage[spanish]{babel}
+\usepackage[font=small,skip=2pt]{caption}
 
-\author{Tomás Mastantuono}
+\author{Mastantuono Tomás}
 
 \begin{document}
 \title{Prueba de oposición | Ay. de segunda}
@@ -15,15 +16,34 @@
 \maketitle
 
 \begin{multicols}{2}
-\section*{Introducción}
+
+    \section*{Introducción}
 \label{introducción}
+
+Para comenzar la clase realizaría un repaso sobre las leyes que vamos a utilizar, donde adelantándome al desarrollo del ejercicio, recordaría las ecuaciones de Newton y la ley de Hooke.
+
+Comenzando por un repaso de las ecuaciones de Newton, que son las siguientes:
+
+\begin{equation}
+    m\ddot{\vec{r}} = \vec{F}
+\end{equation}
+
+Donde $\vec{r}$ es un vector que representa la posición de la partícula, $m$ es la masa de esta, y $\vec{F}$ modela todas las fuerzas actuantes sobre ella.
+
+Como siguiente ley importante, y de mucha utilidad en el trabajo, es la ley de Hooke, la cual posee la siguiente forma:
+
+\begin{equation}
+    \vec{F}_e = -k(\vec{l} - \vec{l}_0)
+\end{equation}
+
+Donde en esta ley, $k$ es la llamada constante elástica del resorte, $\vec{l}$ es el vector que marca la posición de la partícula que siente esta fuerza, y $\vec{l}_0$ es lo que llamamos longitud natural del resorte. Este último elemento tiene una gran importancia, ya que si $\vec{l}_0$ es el vector $0$, entonces si alejo la partícula (equivalente a aumentar $\vec{l}$) entonces la fuerza es negativa y se convierte en una fuerza atractiva. En cambio, si nos olvidamos del valor de $\vec{l}_0$ y hacemos que $\vec{l} < \vec{l}_0$ entonces como resultado de la resta obtendremos algo negativo, conviertiendo a la fuerza en una repulsiva.
 
 \section{DCL, Ecuaciones de Newton}
 La partícula se encuentra enhebrada a un alambre rígido y sin rozamiento. Además se encuentra unida a un resorte de constante $k$ y longitud natural $l_0 = 0$, donde el otro extremo del resorte se encuentra libre sobre $\hat{y}$ de forma tal que el resorte siempre se mantenga de forma horizontal, tal como se muestra en la Figura \ref{fig: diagrama_problema}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.8\linewidth]{src/esquema_problema.pdf}
+    \includegraphics[scale = 0.3]{src/esquema_problema.pdf}
     \caption{
         Esquema del problema que dibujaría en el pizarrón para hacer explicación detallada de los parámetros del problema.
     }
@@ -32,7 +52,7 @@ La partícula se encuentra enhebrada a un alambre rígido y sin rozamiento. Adem
 
 Previo a aplicar las ecuaciones de Newton me parece importante ver los vínculos que le imponemos a la partícula. La principal condición que tiene que cumplir la partícula es que se encuentra enhebrada al alambre rígido, es decir, solo se puede mover por el hilo, no por fuera de el. Esta condición se puede traducir directamente a restricciones sobre los valores que pueden tomar las coordenadas de la masa / partícula.
 
-Siguiendo el esquema dado por la Figura \ref{fig: diagrama_problema} podemos ver como la partícula solo puede moverse siguiendo a la barra, la cual por el sistema de referencia puesto podemos describir como una función lineal que tiene ordenada al origen en $L$ y como raiz también $L$. De esta forma, siguiendo la Figura \ref{fig: vinculo}, nos da la condición de vínculo dada por (\ref{eq: ec_vinculo}).
+Siguiendo el esquema dado por la Figura \ref{fig: diagrama_problema} podemos ver como la partícula solo puede moverse siguiendo a la barra, la cual por el sistema de referencia puesto, podemos describir como una función lineal que tiene ordenada al origen en $L$ y como raiz también $L$. De esta forma, siguiendo la Figura \ref{fig: vinculo}, nos da la condición de vínculo dada por (\ref{eq: ec_vinculo}).
 
 \begin{figure}[H]
     \centering
@@ -49,34 +69,34 @@ Siguiendo el esquema dado por la Figura \ref{fig: diagrama_problema} podemos ver
     \label{eq: ec_vinculo}
 \end{equation}
 
-Además, utilizando la Figura \ref{fig: vinculo}, relaciones trigonométricas dadas por la introducción (volvería a repasar \ref{introducción}) y Pitágoras, podemos notar que el largo de la barra por la cual la partícula puede oscilar es $h = \sqrt{2}L/2$.
+Además, utilizando la Figura \ref{fig: vinculo}, relaciones trigonométricas y Pitágoras, podemos notar que el largo de la barra por la cual la partícula puede oscilar es $h = \sqrt{2}L/2$.
 Notemos que la partícula en el problema solo puede moverse por el hilo, el cual describimos como una función lineal, por lo que si $y(t)$ y $x(t)$ representan las coordenadas de la posición de la partícula entonces esa función lineal representa un vínculo.
 
-Ahora si paso al DCL teniendo en cuenta que la partícula solo puede moverse sobre la barra, por lo que debe haber $\vec{F}_{v}$ que se encarga de eso:
+Ahora si paso al DCL, teniendo en cuenta que la partícula solo puede moverse sobre la barra, debe haber alguna $\vec{F}_{v}$ actuando sobre la partícula de forma tal que se encargue de eso:
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{src/DCL.pdf}
     \caption{
-        EXPLICAR COSAS.
+        DCL del sistema de la partícula, en la cual explicaría como dibujarlo, detallando en que la $\vec{F}_v$ fue dibujada en esa dirección debido a como actúan la fuerza de gravedad y la elástica. Además, explicaría como proyectar esta fuerza de vínculo sobre ambos ejes cartesianos.
     }
     \label{fig: DCL}
 \end{figure}
 
-Para poder escribir las ecuaciones de Newton en cada dirección del sistema de coordenadas necesito ver alguna foorma de descomponer $\vec{F}_v$ en los ejes $\hat{x}$ e $\hat{y}$, para ver la siguiente descomposición utilizaría la Figura \ref{fig: vinculo}.
+Para poder escribir las ecuaciones de Newton en cada dirección del sistema de coordenadas necesito ver alguna forma de descomponer $\vec{F}_v$ en los ejes $\hat{x}$ e $\hat{y}$, para ver la siguiente descomposición utilizaría la Figura \ref{fig: vinculo}.
 
 \begin{equation}
-    \vec{F}_v = F_{vx} \hat{x} + F_{vy} \hat{y} = Fcos(\alpha) \hat{x} + Fsin(\alpha) \hat{y}
+    \vec{F}_v = F_{vx} \hat{x} + F_{vy} \hat{y} = Fcos\alpha \ \hat{x} + Fsin\alpha \ \hat{y}
 \end{equation}
 
-Para obtener el valor de $\alpha$ (la cual es constante en el tiempo porque las otras fuerzas no cambian de dirección a medida que la partícula se mueve) utilizo la forma geométrica formada entre la barra y el sistema de coordenadas en algún tiempo $t$. De esta forma, utilizando la Figura \ref{fig: vinculo} puedo obtener el siguiente sistema de ecuaciones:
+Para obtener el valor de $\alpha$ (el cual es constante en el tiempo porque las otras fuerzas no cambian de dirección a medida que la partícula se mueve) utilizo la forma geométrica formada entre la barra y el sistema de coordenadas en algún tiempo $t$. De esta forma, utilizando la Figura \ref{fig: vinculo} puedo obtener el siguiente sistema de ecuaciones:
 
 \begin{equation}
-\begin{split}
+\begin{cases}
     sin(\alpha) &= \frac{h/2}{L} = \frac{\sqrt{2}}{2} \\
     cos(\alpha) &= \frac{L/\sqrt{2}}{L} = \frac{1}{\sqrt{2}}
     \label{eq: sist_alpha}
-\end{split}
+\end{cases}
 \end{equation}
 
 Por lo tanto, resolviendo el sistema de ecuaciones dado por (\ref{eq: sist_alpha}), obtengo que $\alpha = \pi/4$. De esta forma, reemplazando en las proyecciones de la fuerza sobre los ejes cartesianos:
@@ -88,25 +108,25 @@ Por lo tanto, resolviendo el sistema de ecuaciones dado por (\ref{eq: sist_alpha
 Utilizando ahora que conozco la forma descompuesta de la fuerza de vínculo, escribo las ecuaciones de Newton en las direcciones de $\hat{x}$ e $\hat{y}$, obteniendo el siguiente sistema:
 
 \begin{equation}
-\begin{split}
+\begin{cases}
     \hat{x}\big) m\ddot{x} = -kx + F\frac{\sqrt{2}}{2} \\
     \hat{y}\big) m\ddot{y} = -mg + F\frac{\sqrt{2}}{2}
-\end{split}
+\end{cases}
 \end{equation}
 
-Para hallar los puntos de equilibrio tengo que encontrar los $\vec{X}_eq = x_eq \hat{x} + y_eq \vec{y}$ tal que en esas posiciones no hay aceleración (no hay fuerzas actuando sobre el cuerpo):
+Para hallar los puntos de equilibrio tengo que encontrar los $\vec{r}_{eq} = x_{eq} \hat{x} + y_{eq} \hat{y}$ tal que en esas posiciones no hay aceleración (no hay fuerzas actuando sobre el cuerpo):
 
 \begin{equation}
-\begin{split}
+\begin{cases}
     kx_{eq} &= \frac{\sqrt{2}}{2}F \\
     mg &= \frac{\sqrt{2}}{2}F
-\end{split}
+\end{cases}
 \end{equation}
 
 De esta ecuación podemos independizarnos de la fuerza externa y obtener una relación entre los parámetros del problema para el $x_{eq}$, que junto a la ecuación de vínculo, las coordenadas del equilibrio están dadas por:
 
 \begin{equation}
-    x_{eq} = \frac{mg}{k} ; y(x_{eq}) = -\frac{mg}{k} + l
+    x_{eq} = \frac{mg}{k} \ ; \ y(x_{eq}) = -\frac{mg}{k} + l
 \end{equation}
 
 Tener en cuenta que estas posiciones de equilibrio solo pueden existir si se cumple la siguiente condición:
@@ -115,17 +135,17 @@ Tener en cuenta que estas posiciones de equilibrio solo pueden existir si se cum
     0 \leq x_{eq} \leq L \Rightarrow 0 \leq mg \leq kL
 \end{equation}
 
-Notemos que la condición para que exista es pedir que la fuerza gravitatoria se, en módulo, mayor o igual que $0$, y menor o igual que $kL$, es decir, la fuerza máxima que logra hacer el resorte sobre la mesa.
+Notemos que la condición para que exista es pedir que la fuerza gravitatoria sea, en módulo, mayor o igual que $0$, y menor o igual que $kL$, es decir, la fuerza máxima que logra hacer el resorte sobre la mesa.
 
-\section{Solución del problema}
-Ahora que conocemos estos datos, nos podemos meter de lleno a hallar la ecuación de movimiento, la cual no es mas que una ecuación diferencial de la "coordenada principal del sistema". Para esto tomo el siguiente sistema de ecuaciones:
+\section{Solución de las ecuaciones}
+Ahora que conocemos estos datos, nos podemos meter de lleno a hallar la ecuación de movimiento, la cual no es mas que una ecuación diferencial de la coordenada principal del sistema. Para esto tomo el siguiente sistema de ecuaciones:
 
 \begin{equation}
-\begin{split}
+\begin{cases}
     m\ddot{x} &= -kx + \frac{\sqrt{2}}{2}F \\
     m\ddot{y} &= -mg + \frac{\sqrt{2}}{2}F \\
     y(x) &= -x + L
-\end{split}
+\end{cases}
 \end{equation}
 
 Donde si derivamos el vínculo, la tercera ecuación del sistema, y reemplazamos en la segunda ecuación obtenemos la siguiente relación:
@@ -139,18 +159,19 @@ Ahora es importante notar que ya tenemos las herramientas necesarias para poder 
 \begin{equation}
 \begin{split}
     0 = -(kx + mg) + \sqrt{2}F
-    \leftrightarrow F = \frac{kx + mg}{\sqrt{2}}
+    \Leftrightarrow F = \frac{kx + mg}{\sqrt{2}}
 \end{split}
 \end{equation}
 
 Notemos que la intensidad de la fuerza de vínculo depende de la posición de la partícula, esto tiene sentido porque el peso no varía pero si la fuerza elástica.
 
-Ahora que ya conocemos el valor de la fuerza de víncula en función de la coordenada $x$, podemos reemplazar este último resultado en la primera ecuación del sistema de ecuaciones y obtener finalmente la ecuación de movimiento:
+Ahora que ya conocemos el valor de la fuerza de vínculo en función de la coordenada $x$, podemos reemplazar este último resultado en la primera ecuación del sistema de ecuaciones y obtener finalmente la ecuación de movimiento:
 
 \begin{equation}
+    \centering
     \begin{split}
-        m\ddot{x} = -kx + \frac{\sqrt{2}}{2}\frac{kx + mg}{\sqrt{2}} \\
-        \leftrightarrow m\ddot{x} + \frac{k}{2}x = \frac{1}{2}mg
+        &m\ddot{x} = -kx + \frac{\sqrt{2}}{2}\frac{kx + mg}{\sqrt{2}} \\
+        &\Leftrightarrow m\ddot{x} + \frac{k}{2}x = \frac{1}{2}mg
     \end{split}
 \end{equation}
 
@@ -174,11 +195,11 @@ Para este tipo de ecuaciones diferenciales, donde la coordenada $x$ se encuentra
 
 Para probar si esta propuesta cumple la ecuación diferencial, debermos derivarla dos veces respecto del tiempo (este cálculo se haría detalladamente en el pizarrón), y reemplazar en la ecuación:
 \begin{equation}
-\begin{split}
-    m\big[ -A\omega^2cos(\omega t) - B\omega^2sin(\omega t) \big] + \frac{k}{2}\big[ Acos(\omega t) + Bsin(\omega t) \big] = 0 \\
-    Acos(\omega t) \bigg(\frac{k}{2} - m\omega^2\bigg) + Bsin(\omega t)\bigg( \frac{k}{2} - m\omega^2 \bigg) = 0 \\
-    \omega^2 = \frac{k}{2m}
-\end{split}
+    \centering
+    \begin{split}
+        Acos(\omega t) \bigg(\frac{k}{2} - m&\omega^2 \bigg) + Bsin(\omega t)\bigg( \frac{k}{2} - m\omega^2 \bigg) = 0 \\
+        &\Leftrightarrow \omega^2 = \frac{k}{2m}
+    \end{split}
 \end{equation}
 
 Notemos que la $\omega$ posee unidades de $t^{-1}$, cosa importante ya que el coseno debe tener como argumento para ser válido elementos adimensionales. Además, a este nuevo parámetro $\omega$ se lo llama frecuencia, y como se puede ver, depende de dos parámetros importantes del sistema, la constante elástica del resorte $k$ y de la masa de la partícula, por lo que si el resorte fuera mas "duro", la frecuencia aumentaria en valor, mientras que si la partícula tuviera mayor masa, la frecuencia disminuiría.
@@ -234,7 +255,7 @@ Donde la solución posee la siguiente forma:
     \includegraphics[width=1\linewidth]{src/solucion_xt.pdf}
 \end{figure}
 
-Notemos que la solución que encontramos nos muestra que la partícula se encuentra oscilando al rededor de la posición de equilibrio, con una frecuencia que depende de la constante elástica del resorte y de la masa de la propia partícula. Por lo que si la constante elástica del resorte fuera mas grande, lo que podría llegar a significar por ejemplo que el resorte es mas duro, si logramos desplazarlo hacia alguna posición donde la fuerza elástica sea diferente de cero, la partícula se pondría a oscilar más rápido debido a que la fuerza elástica depende de una constante $k$ que es mayor a la anterior, traduciéndose en nuestra solución a que la frecuencia aumente y por lo tanto el coseno cumpla mas "ciclos" en un menor tiempo. Ocurriría completamente lo opuesto si la partícula tuviera menor masa, esto es debido a que el factor $m$ que referencia a la masa de la partícula, se encuentra dividiendo en la expresión de la frecuencia.
+Notemos que la solución que encontramos nos muestra que la partícula se encuentra oscilando al rededor de la posición de equilibrio, con una frecuencia que depende de la constante elástica del resorte y de la masa de la propia partícula. Por lo que si la constante elástica del resorte fuera mas grande, lo que podría llegar a significar, por ejemplo, que el resorte es mas duro, si logramos desplazarlo hacia alguna posición donde la fuerza elástica sea diferente de cero, la partícula se pondría a oscilar más rápido debido a que la fuerza elástica depende de una constante $k$ que es mayor a la anterior, traduciéndose en nuestra solución a que la frecuencia aumente y por lo tanto el coseno cumpla mas ciclos en un menor tiempo. Ocurriría completamente lo opuesto si la partícula tuviera menor masa, esto es debido a que el factor $m$ que referencia a la masa de la partícula, se encuentra dividiendo en la expresión de la frecuencia.
 
 Finalmente nos piden hallar la altura máxima a la que llega la partícula. Para esto tengo que ver cuando la velocidad en la coordenada $y$ se anula, esto es debido a que la altura está dada por esta coordenada. Por lo tanto,  debo obtener $y(t)$, y para ello solo tengo que reemplazar la solución encontrada $x(t)$ en el vínculo que planteamos al principio del problema, obteniendo:
 

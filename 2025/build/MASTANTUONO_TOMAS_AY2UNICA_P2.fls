@@ -1,7 +1,7 @@
 PWD c:\Users\User\Documents\Ayudantia\2025
 INPUT C:\Users\User\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\User\Documents\Ayudantia\2025\opsicion_2025.tex
-OUTPUT c:\Users\User\Documents\Ayudantia\2025\build\opsicion_2025.log
+INPUT c:\Users\User\Documents\Ayudantia\2025\MASTANTUONO_TOMAS_AY2UNICA_P2.tex
+OUTPUT c:\Users\User\Documents\Ayudantia\2025\build\MASTANTUONO_TOMAS_AY2UNICA_P2.log
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
@@ -63,10 +63,10 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\es\ba
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\es\babel-es.ini
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT c:\Users\User\Documents\Ayudantia\2025\build\opsicion_2025.aux
-INPUT c:\Users\User\Documents\Ayudantia\2025\build\opsicion_2025.aux
-INPUT c:\Users\User\Documents\Ayudantia\2025\build\opsicion_2025.aux
-OUTPUT c:\Users\User\Documents\Ayudantia\2025\build\opsicion_2025.aux
+INPUT c:\Users\User\Documents\Ayudantia\2025\build\MASTANTUONO_TOMAS_AY2UNICA_P2.aux
+INPUT c:\Users\User\Documents\Ayudantia\2025\build\MASTANTUONO_TOMAS_AY2UNICA_P2.aux
+INPUT c:\Users\User\Documents\Ayudantia\2025\build\MASTANTUONO_TOMAS_AY2UNICA_P2.aux
+OUTPUT c:\Users\User\Documents\Ayudantia\2025\build\MASTANTUONO_TOMAS_AY2UNICA_P2.aux
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -110,15 +110,19 @@ INPUT .\src\esquema_problema.pdf
 INPUT .\src\esquema_problema.pdf
 INPUT .\src\esquema_problema.pdf
 INPUT .\src\esquema_problema.pdf
-OUTPUT c:\Users\User\Documents\Ayudantia\2025\build\opsicion_2025.pdf
+OUTPUT c:\Users\User\Documents\Ayudantia\2025\build\MASTANTUONO_TOMAS_AY2UNICA_P2.pdf
 INPUT .\src\esquema_problema.pdf
 INPUT .\src\esquema_problema.pdf
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT .\src\gráfico del vínculo.pdf
 INPUT .\src\gráfico del vínculo.pdf
 INPUT .\src\gráfico del vínculo.pdf
 INPUT .\src\gráfico del vínculo.pdf
 INPUT .\src\gráfico del vínculo.pdf
 INPUT .\src\gráfico del vínculo.pdf
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
 INPUT .\src\DCL.pdf
 INPUT .\src\DCL.pdf
 INPUT .\src\DCL.pdf
@@ -132,15 +136,19 @@ INPUT .\src\solucion_xt.pdf
 INPUT .\src\solucion_xt.pdf
 INPUT .\src\solucion_xt.pdf
 INPUT .\src\solucion_xt.pdf
-INPUT c:\Users\User\Documents\Ayudantia\2025\build\opsicion_2025.aux
+INPUT c:\Users\User\Documents\Ayudantia\2025\build\MASTANTUONO_TOMAS_AY2UNICA_P2.aux
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
@@ -149,6 +157,8 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
