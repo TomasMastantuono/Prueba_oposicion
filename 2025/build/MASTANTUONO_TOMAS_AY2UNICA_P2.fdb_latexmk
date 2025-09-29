@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1759115857.65073 "c:/Users/User/Documents/Ayudantia/2025/MASTANTUONO_TOMAS_AY2UNICA_P2.tex" "build/MASTANTUONO_TOMAS_AY2UNICA_P2.pdf" "MASTANTUONO_TOMAS_AY2UNICA_P2" 1759115858.81012 0
+["pdflatex"] 1759155126.08707 "c:/Users/User/Documents/Ayudantia/2025/MASTANTUONO_TOMAS_AY2UNICA_P2.tex" "build/MASTANTUONO_TOMAS_AY2UNICA_P2.pdf" "MASTANTUONO_TOMAS_AY2UNICA_P2" 1759155127.28154 0
   "C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759114773 81074 e9df683c7a67b773afe1722d345afa16 ""
   "C:/Users/User/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758938203 13256900 a7265916d66bfc831425e070b2963333 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -71,9 +71,9 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty" 1665066333 13815 760b0c02f691ea230f5359c4e1de23a7 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1751005717 30351 a2b09edc6c93a742566b222c33d0278e ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1749468414 33259 db80f750a01491473161bd4d0f6986d2 ""
-  "MASTANTUONO_TOMAS_AY2UNICA_P2.tex" 1759115856 17650 b15d0f99d51506cc2ffcbe07c77607e0 ""
-  "build/MASTANTUONO_TOMAS_AY2UNICA_P2.aux" 1759115858 1717 9254576ffa1e9a17580ddf9665a802b9 "pdflatex"
-  "c:/Users/User/Documents/Ayudantia/2025/MASTANTUONO_TOMAS_AY2UNICA_P2.tex" 1759115856 17650 b15d0f99d51506cc2ffcbe07c77607e0 ""
+  "MASTANTUONO_TOMAS_AY2UNICA_P2.tex" 1759155125 17810 86c75c592416b063d442c7f8738df9d9 ""
+  "build/MASTANTUONO_TOMAS_AY2UNICA_P2.aux" 1759155127 1717 9254576ffa1e9a17580ddf9665a802b9 "pdflatex"
+  "c:/Users/User/Documents/Ayudantia/2025/MASTANTUONO_TOMAS_AY2UNICA_P2.tex" 1759155125 17810 86c75c592416b063d442c7f8738df9d9 ""
   "src/DCL.pdf" 1759077123 122140 000bd532083ca02c18c4e854123e4fcc ""
   "src/esquema_problema.pdf" 1759073873 12961 9751bd42415fdd0aead5aeb4130e326e ""
   "src/gráfico del vínculo.pdf" 1759115843 120484 afb97cfe2739fd39c55e3578c8e158eb ""
